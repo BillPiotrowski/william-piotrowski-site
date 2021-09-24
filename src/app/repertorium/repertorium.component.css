@@ -1,0 +1,73 @@
+section {
+    padding-top: 4em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+ul {
+    margin: 0;
+}
+
+ul#catalog li {
+    list-style: none;
+    float: left;
+    margin: 0;
+}
+ul#catalog li a {
+    /* margin: 0; */
+    display: block;
+    line-height: 0%;
+    width: 290px;
+    height: 310px;
+    background: center center no-repeat;
+}
+ul#catalog li#greyCardinal a {
+    background-image: url(/assets/images/catalog/thumb_grey-cardinal_b&w.png);
+}
+ul#catalog li#greyCardinal a:hover {
+    background-image: url(/assets/images/catalog/thumb_grey-cardinal_color.jpg);
+}
+ul#catalog li#lonesomeTown a {
+    background-image: url(/assets/images/catalog/thumb_lonesome-town_b&w.png);
+}
+ul#catalog li#lonesomeTown a:hover {
+    background-image: url(/assets/images/catalog/thumb_lonesome-town_color.jpg);
+}
+ul#catalog li#darkloreManor a {
+    background-image: url(/assets/images/catalog/thumb_darklore_b&w.png);
+}
+ul#catalog li#darkloreManor a:hover {
+    background-image: url(/assets/images/catalog/thumb_darklore_color.jpg);
+}
+ul#catalog li#necronomicon a {
+    background-image: url(/assets/images/catalog/thumb_necronomicon_b&w.png);
+}
+ul#catalog li#necronomicon a:hover {
+    background-image: url(/assets/images/catalog/thumb_necronomicon_color.jpg);
+}
+ul#catalog li#transylvania a {
+    background-image: url(/assets/images/catalog/thumb_transylvania_b&w.png);
+}
+ul#catalog li#transylvania a:hover {
+    background-image: url(/assets/images/catalog/thumb_transylvania_color.jpg);
+}
+ul#catalog li#wintersKnight a {
+    background-image: url(/assets/images/catalog/thumb_winters-knight_b&w.png);
+}
+ul#catalog li#wintersKnight a:hover {
+    background-image: url(/assets/images/catalog/thumb_winters-knight_color.jpg);
+}
+ul#catalog li#carnival a {
+    background-image: url(/assets/images/catalog/thumb_carnival_b&w.png);
+}
+ul#catalog li#carnival a:hover {
+    background-image: url(/assets/images/catalog/thumb_carnival_color.jpg);
+}
+ul#catalog li#bloodOfTheDragon a {
+    background-image: url(/assets/images/catalog/thumb_blood-of-the-dragon_b&w.png);
+}
+ul#catalog li#bloodOfTheDragon a:hover {
+    background-image: url(/assets/images/catalog/thumb_blood-of-the-dragon_color.jpg);
+}

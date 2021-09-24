@@ -1,0 +1,20 @@
+#biography {
+    height: 100%;
+    width: 40%;
+    position: absolute;
+    right: 0;
+    /* right: -40%; */
+    top: 0;
+    padding: 4em 0 20px;
+    
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#biography .wrapper {
+    background:#333;
+    color: #ccc;
+    padding: 20px;
+    text-align: justify;
+}

@@ -1,0 +1,31 @@
+.open-close-container {
+    overflow: hidden;
+    background: #0b0b0b;
+}
+
+nav ul li {
+    float: left;
+    list-style: none;
+    margin-right: 12px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #5a5a5a;
+    font-size: 1.6em;
+    /* text-transform: uppercase; */
+    font-family: 'UnifrakturMaguntia', cursive;
+}
+nav ul li a:hover {
+    text-decoration: none;
+    color: #972222;
+    font-size: 1.6em;
+    /* text-transform: uppercase; */
+    font-family: 'UnifrakturMaguntia', cursive;
+}
+nav ul li a.active {
+    color: lime;
+}
+
+#homeLink img {
+    width: 50px;
+}

@@ -1,0 +1,31 @@
+nav ul li {
+    float: left;
+    list-style: none;
+}
+nav ul li a {
+    display: block;
+    width: 402px;
+    height: 326px;
+    width: 380px;
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    background-position: top center;
+}
+nav ul li#repertorium a {
+    background-image: url(/assets/images/flute-hand.png);
+}
+nav ul li#repertorium a:hover {
+    background-image: url(/assets/images/flute.png);
+}
+nav ul li#biography a {
+    background-image: url(/assets/images/mask-hand.png);
+}
+nav ul li#biography a:hover {
+    background-image: url(/assets/images/mask.png);
+}
+nav ul li#contact a {
+    background-image: url(/assets/images/raven-hand.png);
+}
+nav ul li#contact a:hover {
+    background-image: url(/assets/images/raven.png);
+}

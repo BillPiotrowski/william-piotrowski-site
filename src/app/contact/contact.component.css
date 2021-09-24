@@ -1,0 +1,16 @@
+#correspondance {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40%;
+    overflow: hidden;
+    height: 100%;
+}
+#correspondance .wrapper {
+    background:#0b0b0b;
+    color: #ccc;
+    padding: 20px;
+    text-align: justify;
+    text-align: center;
+    margin: 4em 0 20px;
+}
