@@ -21,53 +21,53 @@ ul#catalog li a {
     line-height: 0%;
     width: 290px;
     height: 310px;
-    background: center center no-repeat;
+    /* background: center center no-repeat; */
+    background: url(/assets/images/contact-sheet-bw.png) no-repeat;
+    background-size: 253.75rem 19.375rem;
+    /* 290 x 310 */
 }
-ul#catalog li#greyCardinal a {
-    background-image: url(/assets/images/catalog/thumb_grey-cardinal_b&w.png);
+ul#catalog li a:hover {
+    background-image: url(/assets/images/contact-sheet-color.jpg);
 }
-ul#catalog li#greyCardinal a:hover {
-    background-image: url(/assets/images/catalog/thumb_grey-cardinal_color.jpg);
-}
+
 ul#catalog li#lonesomeTown a {
-    background-image: url(/assets/images/catalog/thumb_lonesome-town_b&w.png);
-}
-ul#catalog li#lonesomeTown a:hover {
-    background-image: url(/assets/images/catalog/thumb_lonesome-town_color.jpg);
+    background-position-x: -18.125rem;
 }
 ul#catalog li#darkloreManor a {
-    background-image: url(/assets/images/catalog/thumb_darklore_b&w.png);
-}
-ul#catalog li#darkloreManor a:hover {
-    background-image: url(/assets/images/catalog/thumb_darklore_color.jpg);
+    background-position-x: -36.25rem;
 }
 ul#catalog li#necronomicon a {
-    background-image: url(/assets/images/catalog/thumb_necronomicon_b&w.png);
-}
-ul#catalog li#necronomicon a:hover {
-    background-image: url(/assets/images/catalog/thumb_necronomicon_color.jpg);
+    background-position-x: -54.375rem;
 }
 ul#catalog li#transylvania a {
-    background-image: url(/assets/images/catalog/thumb_transylvania_b&w.png);
-}
-ul#catalog li#transylvania a:hover {
-    background-image: url(/assets/images/catalog/thumb_transylvania_color.jpg);
+    background-position-x: -72.5rem;
 }
 ul#catalog li#wintersKnight a {
-    background-image: url(/assets/images/catalog/thumb_winters-knight_b&w.png);
-}
-ul#catalog li#wintersKnight a:hover {
-    background-image: url(/assets/images/catalog/thumb_winters-knight_color.jpg);
+    background-position-x: -90.625rem;
 }
 ul#catalog li#carnival a {
-    background-image: url(/assets/images/catalog/thumb_carnival_b&w.png);
-}
-ul#catalog li#carnival a:hover {
-    background-image: url(/assets/images/catalog/thumb_carnival_color.jpg);
+    background-position-x: -108.75rem;
 }
 ul#catalog li#bloodOfTheDragon a {
-    background-image: url(/assets/images/catalog/thumb_blood-of-the-dragon_b&w.png);
+    background-position-x: -126.875rem;
 }
-ul#catalog li#bloodOfTheDragon a:hover {
-    background-image: url(/assets/images/catalog/thumb_blood-of-the-dragon_color.jpg);
+
+
+ul#catalog li#memory a {
+    background-position-x: -145rem;
+}
+ul#catalog li#shadowOfTheRaven a {
+    background-position-x: -163.125rem;
+}
+ul#catalog li#grimmTales a {
+    background-position-x: -181.25rem;
+}
+ul#catalog li#phantomsOfTheHighSeas a {
+    background-position-x: -199.375rem;
+}
+ul#catalog li#bloodOfAngels a {
+    background-position-x: -217.5rem;
+}
+ul#catalog li#crimsonWinter a {
+    background-position-x: -235.625rem;
 }
