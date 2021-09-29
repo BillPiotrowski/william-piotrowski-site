@@ -1,0 +1,29 @@
+{
+    "urls": [
+        {
+            "url": "/",
+            "video": "home-bg-light.mp4",
+            "audio": ""
+        },
+        {
+            "url": "/grey-cardinal",
+            "video": "greyCardinal.mp4",
+            "audio": "grey-cardinal.mp3"
+        },
+        {
+            "url": "/biography",
+            "video": "home-bg-light.mp4",
+            "audio": ""
+        },
+        {
+            "url": "/darklore-manor",
+            "video": "",
+            "audio": "06_Sanctuary_Of_Shadows.mp3"
+        },
+        {
+            "url": "/transylvania",
+            "video": "transylvania.mp4",
+            "audio": "06_Sanctuary_Of_Shadows.mp3"
+        }
+    ]
+}

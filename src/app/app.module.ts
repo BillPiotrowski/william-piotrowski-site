@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GlobalNavComponent } from './global-nav/global-nav.component';
 import { GreyCardinalComponent } from './music/grey-cardinal/grey-cardinal.component';
 import { TransportControlComponent } from './elements/transport-control/transport-control.component';
+import { DarkloreManorComponent } from './music/darklore-manor/darklore-manor.component';
+import { TransylvaniaComponent } from './music/transylvania/transylvania.component';
 
 
 
@@ -25,7 +27,9 @@ import { TransportControlComponent } from './elements/transport-control/transpor
     ContactComponent,
     GlobalNavComponent,
     GreyCardinalComponent,
-    TransportControlComponent
+    TransportControlComponent,
+    DarkloreManorComponent,
+    TransylvaniaComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +46,10 @@ import { TransportControlComponent } from './elements/transport-control/transpor
       { path: '',   redirectTo: '/contact', pathMatch: 'full' },
       { path: 'grey-cardinal', component: GreyCardinalComponent, data: {animation: 'MusicItemPage'} },
       { path: '',   redirectTo: '/grey-cardinal', pathMatch: 'full' },
+      { path: 'darklore-manor', component: DarkloreManorComponent, data: {animation: 'MusicItemPage'} },
+      { path: '',   redirectTo: '/darklore-manor', pathMatch: 'full' },
+      { path: 'transylvania', component: TransylvaniaComponent, data: {animation: 'MusicItemPage'} },
+      { path: '',   redirectTo: '/transylvania', pathMatch: 'full' },
       // { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
     ]),
   ],

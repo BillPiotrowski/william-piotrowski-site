@@ -1,18 +1,79 @@
+
+
+ /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+
+
 /* You can add global styles to this file, and also import other style files */
 /* Application-wide Styles */
 h1 {
-    color: #369;
+    /* color: #369; */
     /* font-family: Arial, Helvetica, sans-serif; */
-    font-size: 250%;
+    /* font-size: 250%; */
   }
   h2, h3 {
-    color: #444;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
+    /* color: #444; */
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* font-weight: lighter; */
   }
   body {
     margin: 2em;
     font-family: 'IM Fell DW Pica', serif;
+    line-height: 1.5;
+    color: #a19e91;
+    /* font-size: 32px; */
   }
   body, input[type="text"], button {
     color: #333;
@@ -25,5 +86,348 @@ h1 {
   a {
 
     color: #369;
+    color: #972222;
     text-decoration: none;
   }
+
+  a:hover {
+    /* text-decoration: none; */
+    color: #c61313;
+    /* font-size: 1.6em; */
+    /* text-transform: uppercase; */
+    /* font-family: 'UnifrakturMaguntia', cursive; */
+    text-decoration: underline;
+}
+p {
+  margin-bottom: 1em;
+}
+em {
+  font-style: italic;
+}
+
+
+  html, body {
+    background: black;
+  }
+
+/* body {
+  background: url(/assets/images/static-gif-tumblr.gif);
+  background-size: contain;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#musicItem {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 4em;
+  padding-top: 78vh;
+  width: 100%;
+  /* max-width: 500px; */
+  /* opacity: 0.9; */
+}
+#musicItem .wrapper {
+  background: #333;
+  /* opacity: .8; */
+  padding: 8px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #a19e91;
+  background: url(/assets/images/music-item-background.gif) repeat;
+}
+
+#musicItem section .label {
+  flex: 0 0 6.875em;
+}
+
+#musicItem #backLink {
+  margin-bottom: 1em;
+  display: block;
+}
+
+
+/* -----------------     Header    ---------------------- */
+#musicItem .wrapper main > header h1 {
+  background: url(/assets/images/rules/horizontal-rule-double.png) repeat-x bottom;
+  padding-bottom: .75rem; /* 12px */
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+/* -----------------     Description    ---------------------- */
+#musicItem #description {
+  background: url(/assets/images/rules/horizontal-rule-double-rotate.png) repeat-x bottom right;
+  padding-bottom: .75rem; /* 12px */
+  margin-bottom: 0.5rem; /* 8px */
+  text-align: justify;
+}
+
+
+
+
+
+
+/* -----------------     Details    ---------------------- */
+#musicItem #details {
+  background: url(/assets/images/rules/horizontal-rule-double-rotate.png) repeat-x bottom left;
+  padding-bottom: 1rem; 
+  margin-bottom: 0.5rem;
+  /* ---------- Not sure this should be REM, since it is a width. Might be better as px */
+  flex: 0 0 110px; /* 0 0 110px */
+  display: flex;
+  align-items: center;
+}
+/* Overriding default h2, so that h2 can be used instead of h3. This is because it appears before the first h3. */
+#musicItem #details h2 {
+  font-size: 1.25rem;
+  text-transform: none;
+}
+#musicItem section#details ul {
+  padding: 0 0 0 1rem;
+  background: url(/assets/images/rules/vertical-rule.png) repeat-y left;
+}
+
+
+
+/* -----------------     Listening Options    ---------------------- */
+#musicItem #listeningOptions h2 {
+  text-align: center;
+}
+#musicItem section#streamOptions, #musicItem section#purchaseOptions {
+  display: flex;
+  align-items: center;
+  background: url(/assets/images/rules/horizontal-rule.png) repeat-x top;
+  padding: 0.875rem 0 0.5rem;
+}
+#musicItem section#purchaseOptions {
+  background-image: url(/assets/images/rules/horizontal-rule-rotate.png);
+}
+#musicItem #listeningOptions ul {
+  padding: 0 0 0 1.5rem;
+  background: url(/assets/images/rules/vertical-rule.png) repeat-y left;
+  margin: 0 0 0.375rem;
+}
+#musicItem #listeningOptions ul li a{
+  display: block;
+  background: url(/assets/images/third-party-sprite-3x.png) no-repeat;
+  height: 2.625em;
+  overflow: hidden;
+  text-indent: -2000px;
+  background-size: 30em 13.125em;
+}
+#musicItem #listeningOptions ul li#stream-spotify a{
+  width: 8em;
+}
+#musicItem #listeningOptions ul li#stream-youtube a{
+  width: 8.75em;
+  background-position-y: -2.625em;
+}
+#musicItem #listeningOptions ul li#stream-apple a{
+  width: 12.5em;
+  background-position-y: -5.25em;
+}
+#musicItem #listeningOptions ul li#purchase-monolith a{
+  width: 3.5em;
+  background-position-y: -7.875em;
+}
+#musicItem #listeningOptions ul li#purchase-amazon a{
+  width: 7em;
+  background-position-y: -10.5em;
+}
+#musicItem #listeningOptions ul li a:hover{
+  background-position-x: -15em;
+}
+
+
+
+
+@media screen and (min-width: 600px) {
+
+  #musicItem .wrapper main > header h1 {
+      margin-bottom: 2px; /* 24px */
+  }
+  #musicItem .top {
+      /* ---------- Not sure this should be REM, since it is a width. Might be better as px */
+      flex: 0 0 43%;
+      display: flex;
+      /* align-items: center; */
+      flex-direction: row-reverse;
+      background: url(/assets/images/rules/horizontal-rule-double-rotate.png) repeat-x bottom right;
+  }
+  #musicItem #description {
+      background: none;
+      margin-left: 3px;
+  }
+  #musicItem #details {
+      background: none;
+      flex: none;
+      display: block;
+      background: url(/assets/images/rules/vertical-rule-double.png) repeat-y right;
+      padding-right: 8px;
+      /* margin-right: .5rem; */
+  }
+  #musicItem #details h2, #musicItem #description h2 {
+      font-size: 1.25rem;
+      text-transform: none;
+      background: url(/assets/images/rules/horizontal-rule.png) repeat-x bottom;
+      font-style: italic;
+      padding-bottom: 4px;
+      padding-top: 0.5rem;
+  }
+  #musicItem #description h2, #musicItem #description p {
+      padding-left: 1rem;
+  }
+  #musicItem section#details ul {
+      padding: 0;
+      background: none;
+      padding-right: .75rem;
+  }
+  #musicItem #listeningOptions h2 {
+      margin-top: 8px;
+      background: url(/assets/images/rules/horizontal-rule.png) repeat-x bottom;
+  }
+  #musicItem section#streamOptions, #musicItem section#purchaseOptions {
+      /* display: flex;
+      align-items: center; */
+      padding: 0;
+      background: none;
+      display: block;
+      flex: 50%;
+  }
+  #musicItem .bottom {
+      display: flex;
+      margin-bottom: 0.5rem;
+  }
+  #musicItem section#streamOptions {
+      background: url(/assets/images/rules/vertical-rule.png) repeat-y right;
+      padding-right: 7px;
+  }
+  #musicItem section#purchaseOptions {
+      padding-left: 2px;
+  }
+  #musicItem section#purchaseOptions h3, #musicItem section#purchaseOptions ul {
+      padding-left: 1rem;
+  }
+  #musicItem #listeningOptions ul {
+      padding: 0;
+      background: none;
+      margin: 0;
+  }
+  #musicItem #listeningOptions h3 {
+      /* font-size: 1.25rem; */
+      /* text-transform: none; */
+      background: url(/assets/images/rules/horizontal-rule.png) repeat-x bottom;
+      /* font-style: italic; */
+      padding-bottom: 4px;
+      padding-top: 0.25rem;
+      margin-bottom: 0.5rem;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* main#musicItem h1 {
+  color: white;
+  font-size: 28px;
+  font-weight: normal;
+}
+main#musicItem h2 {
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+main#musicItem h3 {
+  color: #a19e91;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+} */
+
+
+
+
+h1 {
+  color: #e8e2ca;
+  font-size: 2em;
+  line-height: 1.2;
+  /* font-weight: normal; */
+  margin-bottom: 0.5em;
+}
+/* Used to style type that is additional to H1, but not important enough to semantically separate as h2. e.g. 'album by Nox Arcana' */
+h1 .h1Context {
+  font-size: 0.5em;
+  display: block;
+  color: #a19e91;
+  /* color: #50746f; */
+  /* color: #636342; */
+}
+h2 {
+  /* color: white; */
+  font-size: 1.25em;
+  margin-bottom: .1em;
+  text-transform: uppercase;
+  /* color: #686454; */
+  /* font-weight: normal; */
+}
+h3 {
+    font-size: 1.25em;
+    font-style: italic;
+}
+
+
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+ .clearfix::before,
+ .clearfix::after {
+   content: " ";
+   display: table;
+ }
+ 
+ .clearfix::after {
+   clear: both;
+ }
+
+

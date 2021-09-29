@@ -11,6 +11,10 @@ import { GlobalNavComponent } from './global-nav/global-nav.component';
 import { Router, Event, NavigationStart, RouterOutlet } from '@angular/router';
 import { slideInAnimation } from './animations'
 import { AudioService } from './audio.service';
+import assetURLS from './asset-urls.json'; 
+
+
+// const config = require("./config.json");
 
 @Component({
   selector: 'app-root',
@@ -43,12 +47,15 @@ export class AppComponent {
   public videoSource: string = "/assets/video/opening-title-01.mp4"
 
   // private audioEnabled: boolean = false;
+
+  // Users: any = assetURLS;
   
   constructor(
     private router: Router,
     private audioService: AudioService
   ) { 
-
+    console.log("assets:")
+    console.log(assetURLS)
   }
 
     @ViewChild('videoPlayer') videoplayer: any;
@@ -79,6 +86,12 @@ export class AppComponent {
         if (e.url === "/grey-cardinal" && vidSrc != "http://localhost:4200/assets/video/greyCardinal.mp4") {
           this.videoSource = "http://localhost:4200/assets/video/greyCardinal.mp4"
           this.videoplayer.nativeElement.loop = true
+        } else if (e.url === "/darklore-manor" && vidSrc != "http://localhost:4200/assets/video/darklore-manor.mp4") {
+          this.videoSource = "http://localhost:4200/assets/video/darklore-manor.mp4"
+          this.videoplayer.nativeElement.loop = true
+        }  else if (e.url === "/transylvania" && vidSrc != "http://localhost:4200/assets/video/transylvania.mp4") {
+          this.videoSource = "http://localhost:4200/assets/video/transylvania.mp4"
+          this.videoplayer.nativeElement.loop = true
         } else if (vidSrc != "http://localhost:4200/assets/video/home-bg-dark.mp4") {
           this.videoSource = "http://localhost:4200/assets/video/home-bg-dark.mp4"
         }
@@ -92,19 +105,22 @@ export class AppComponent {
         // }
 
         // if(!this.audioService.isEnabled){ return }
-        const audioSrc = this.audioService.source
-        if (e.url === "/grey-cardinal" && audioSrc != "http://localhost:4200/assets/audio/grey-cardinal.mp3") {
-          this.audioService.source = "http://localhost:4200/assets/audio/grey-cardinal.mp3"
-        // this.audioService.audioPlayer.src = "http://localhost:4200/assets/audio/grey-cardinal.mp3"
-          console.log("play Grey cardinal!")
-          // this.audioService.audioPlayer.play()
-          // this.videoplayer.nativeElement.loop = true
+    
+        // const parsedURL = this.router.parseUrl(e.url)
+        // console.log(`PARSED URL: ${parsedURL}. and url: ${e.url}`)
+        const urlAssets: any = assetURLS.urls.find(obj => obj.url == e.url)
+        if (urlAssets == null){
+          return
+        }
+        const audioFileName = urlAssets['audio']
+        if(audioFileName != null && urlAssets['audio'] != ""){
+          this.audioService.source = `/assets/audio/${urlAssets['audio']}`
         }
         else {
-          console.log("stop the music!")
           this.audioService.source = ""
-          // this.audioService.audioPlayer.src = ""
         }
+
+
 
 
       }

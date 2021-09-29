@@ -1,4 +1,4 @@
-import { animation, style, animate, trigger, transition, useAnimation, query, group, animateChild } from '@angular/animations';
+import { animation, style, animate, trigger, transition, useAnimation, query, group, animateChild, sequence } from '@angular/animations';
 
 const leavingTime = '0.4s ease-out'
 const showTime = '0.4s ease-out'
@@ -11,43 +11,49 @@ const prepareToShowBiography = query(':enter .open-close-container',[style({ rig
 const showBiography = query(':enter .open-close-container',[animate(showTime, style({ right: '0%' }))])
 const hideBiography = query(':leave .open-close-container',[animate(leavingTime, style({ right: '-40%' }))])
 
-const prepareToShowRepertorium = query(':enter section', [
+const prepareToShowRepertorium = query(':enter .content', [
   style({
     position: 'absolute',
     left: '-100%'
   })
 ])
-const showRepertorium = query(':enter section',[animate(showTime, style({ left: '0' }))])
-const hideRepertorium = query(':leave section',[animate(leavingTime, style({ left: '-100%' }))])
+const showRepertorium = query(':enter .content',[animate(showTime, style({ left: '0' }))])
+const hideRepertorium = query(':leave .content',[animate(leavingTime, style({ left: '-100%' }))])
 
-const prepareToShowFromLeft = query(':enter section', [
+const prepareToShowFromLeft = query(':enter .content', [
   style({
     left: '-100%'
   })
 ])
-const prepareToShowFromRight = query(':enter section', [
+const prepareToShowFromRight = query(':enter .content', [
   style({
     left: '100%'
   })
 ])
-const show = query(':enter section',[animate(showTime, style({ left: '0' }))])
-const hideToLeft = query(':leave section',[animate(leavingTime, style({ left: '-100%' }))])
-const hideToRight = query(':leave section',[animate(leavingTime, style({ left: '100%' }))])
+const prepareToShowFromBelow = query(':enter .content', [
+  style({
+    top: '100%'
+  })
+])
+const show = query(':enter .content',[animate(showTime, style({ left: '0', top: '0' }))])
+const hideToLeft = query(':leave .content',[animate(leavingTime, style({ left: '-100%' }))])
+const hideToRight = query(':leave .content',[animate(leavingTime, style({ left: '100%' }))])
+const hideToBottom = query(':leave .content',[animate(leavingTime, style({ top: '100%' }))])
 
 export const slideInAnimation = trigger(
   'routeAnimations',
   [
     transition('MusicItemPage => RepertoriumPage', [
       prepareToShowFromRight,
-      group([
-        hideToLeft,
+      sequence([
+        hideToBottom,
         show,
       ])
     ]),
 
     transition('RepertoriumPage => MusicItemPage', [
-      prepareToShowFromLeft,
-      group([
+      prepareToShowFromBelow,
+      sequence([
         hideToRight,
         show,
         
