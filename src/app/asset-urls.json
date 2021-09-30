@@ -58,7 +58,8 @@
         {
             "url": "/grimm-tales",
             "video": "grimm.mp4",
-            "audio": "grimm-medley.mp3"
+            "audio": "grimm-medley.mp3",
+            "bg-image": "grimm-tales.jpg"
         },
         {
             "url": "/phantoms-of-the-high-seas",
@@ -69,6 +70,21 @@
             "url": "/blood-of-angels",
             "video": "",
             "audio": "blood-of-angels.m4a"
+        },
+        {
+            "url": "/lonesome-town",
+            "video": "lonesome-town.mp4",
+            "audio": "lonesome-town.m4a"
+        },
+        {
+            "url": "/crimson-winter",
+            "video": "",
+            "audio": "crimson.m4a"
+        },
+        {
+            "url": "/you-cant-put-your-arms-around-a-memory",
+            "video": "",
+            "audio": "memory.m4a"
         }
     ]
 }

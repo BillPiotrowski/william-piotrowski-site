@@ -8,7 +8,7 @@ import {
   // ...
 } from '@angular/animations';
 import { GlobalNavComponent } from './global-nav/global-nav.component';
-import { Router, Event, NavigationStart, RouterOutlet } from '@angular/router';
+import { Router, Event, NavigationStart, RouterOutlet, ActivationEnd, ActivationStart, NavigationEnd } from '@angular/router';
 import { slideInAnimation } from './animations'
 import { AudioService } from './audio.service';
 import { VideoService } from './video.service';
@@ -45,11 +45,13 @@ export class AppComponent {
   // @ViewChild('child') child: GlobalNavComponent;
   routeHidden = true;
   // public wonders: WonderModel[] = [];
-  public videoSource: string = "/assets/video/opening-title-01.mp4"
+  // public videoSource: string = "/assets/video/opening-title-01.mp4"
 
   // private audioEnabled: boolean = false;
 
   // Users: any = assetURLS;
+
+  private prevURL?: string
   
   constructor(
     private router: Router,
@@ -60,7 +62,9 @@ export class AppComponent {
     console.log(assetURLS)
   }
 
-    @ViewChild('videoPlayer') videoplayer: any;
+  @ViewChild('videoPlayer') videoplayer: any;
+  @ViewChild('staticBG') staticBackground: any;
+  @ViewChild('container') container: any;
 
   ngOnInit() {
     this.router.events.subscribe( (e) => {
@@ -82,16 +86,34 @@ export class AppComponent {
 
   ngAfterViewInit(){
 
-    this.videoService.setVideoPlayer(this.videoplayer.nativeElement)
+    this.videoService.setVideoPlayer(this.videoplayer.nativeElement, this.staticBackground.nativeElement)
     this.router.events.subscribe( (e) => {
+      // console.log(`nav event: ${e}`)
+      if (e instanceof NavigationEnd) {
+
+        const className = e.url.slice(1);
+        this.container.nativeElement.classList.add(className)
+        this.prevURL = className
+      }
       if (e instanceof NavigationStart) {
 
+
+        if (this.prevURL){
+          this.container.nativeElement.classList.remove(this.prevURL)
+        }
+
+        
+
+        
         const urlAssets: any = assetURLS.urls.find(obj => obj.url == e.url)
-        if (urlAssets == null){
+        if (urlAssets === null){
+          // this.videoService.source = ""
+          // this.audioService.source = ""
           return
         }
         const audioFileName = urlAssets['audio']
         const videoFileName = urlAssets['video']
+        const bgImage = urlAssets['bg-image']
 
         if(audioFileName != null && audioFileName != ""){
           this.audioService.source = `/assets/audio/${audioFileName}`
@@ -103,8 +125,13 @@ export class AppComponent {
         if(videoFileName != null && videoFileName != ""){
           this.videoService.source = `/assets/video/${videoFileName}`
         } else {
-          this.videoService.source = "/assets/video/home-bg-dark.mp4"
+          this.videoService.source = ""
         }
+        // if (bgImage && bgImage != ""){
+        //   this.videoService.imageURL = `/assets/images/static-bg/${bgImage}`
+        // } else {
+        //   this.videoService.imageURL = `/assets/images/Skull_03.png`
+        // }
 
 
 

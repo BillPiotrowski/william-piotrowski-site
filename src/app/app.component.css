@@ -15,6 +15,7 @@ body {
     position: fixed;
     right: 0;
     top: 0;
+    z-index: 10;
 }
 
 #myVideo {
@@ -24,6 +25,7 @@ bottom: 0;
 min-width: 100%; 
 min-height: 100%;
     background: #000;
+    z-index: 1;
 
 /* position: absolute; */
 top: 0;
@@ -32,3 +34,69 @@ width: 100%;
 height: 100%;
 z-index: -1;
 }
+
+
+
+#staticBG {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-size: cover;
+    background-position: center center;
+}
+#main {
+    /* position: relative; */
+    z-index: 5;
+}
+
+
+.grimm-tales #staticBG.static {
+    background-image: url(/assets/images/static-bg/grimm-tales.jpg);
+}
+.shadow-of-the-raven #staticBG.static {
+    background-image: url(/assets/images/static-bg/shadow-of-the-raven.jpg);
+}
+.blood-of-the-dragon #staticBG.static {
+    background-image: url(/assets/images/static-bg/BloodoftheDragon.jpg);
+}
+.darklore-manor #staticBG.static {
+    background-image: url(/assets/images/static-bg/DarkloreManor.jpg);
+}
+.phantoms-of-the-high-seas #staticBG.static {
+    background-image: url(/assets/images/static-bg/GhostShip.jpg);
+}
+.carnival-of-lost-souls #staticBG.static {
+    background-image: url(/assets/images/static-bg/HauntedCarousel.jpg);
+}
+.necronomicon #staticBG.static {
+    background-image: url(/assets/images/static-bg/Necronomicon.jpg);
+}
+.transylvania #staticBG.static {
+    background-image: url(/assets/images/static-bg/Transylvania.jpg);
+}
+.winters-knight #staticBG.static {
+    background-image: url(/assets/images/static-bg/WintersKnight.jpg);
+}
+.you-cant-put-your-arms-around-a-memory #staticBG.static {
+    background-image: url(/assets/images/static-bg/memory.jpg);
+}
+.blood-of-angels #staticBG.static {
+    background-image: url(/assets/images/static-bg/Blood-of-Angels.jpg);
+}
+.crimson-winter #staticBG.static {
+    background-image: url(/assets/images/static-bg/crimson-winter.jpg);
+}
+.lonesome-town #staticBG.static {
+    background-image: url(/assets/images/static-bg/lonesome-town.jpg);
+}
+.grey-cardinal #staticBG.static {
+    background-image: url(/assets/images/static-bg/grey-cardinal.jpg);
+}
+
+/* 
+#staticBG.static {
+    background: url(/assets/images/Skull_03.png) repeat;
+} */

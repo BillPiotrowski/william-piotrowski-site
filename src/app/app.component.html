@@ -1,18 +1,22 @@
+<div #container>
+  <div id="staticBG" #staticBG></div>
+  <video autoplay muted playsinline id="myVideo" #videoPlayer >
+      <!-- <source src='assets/video/{{videoSource}}' type="video/mp4"> -->
+      <!-- <source src="/assets/video/opening-title-01.mp4" type="video/mp4"> -->
+    </video>
+  
+    <div #globalNav id="globalNav">
+      <app-global-nav [isOpen]="routeHidden"></app-global-nav>
+    </div>
+  
+  
+    <div id ="main" [@routeAnimations]="prepareRoute(outlet)">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+  
+    <div #transportControl id="transportControl">
+      <app-transport-control (toggleAudioEvent)="toggleAudio()" (toggleVideoEvent)="toggleVideo()"></app-transport-control>
+    </div>
 
-<video autoplay muted playsinline id="myVideo" #videoPlayer >
-    <!-- <source src='assets/video/{{videoSource}}' type="video/mp4"> -->
-    <!-- <source src="/assets/video/opening-title-01.mp4" type="video/mp4"> -->
-  </video>
 
-  <div #globalNav id="globalNav">
-    <app-global-nav [isOpen]="routeHidden"></app-global-nav>
-  </div>
-
-
-  <div [@routeAnimations]="prepareRoute(outlet)">
-    <router-outlet #outlet="outlet"></router-outlet>
-  </div>
-
-  <div #transportControl id="transportControl">
-    <app-transport-control (toggleAudioEvent)="toggleAudio()" (toggleVideoEvent)="toggleVideo()"></app-transport-control>
   </div>
