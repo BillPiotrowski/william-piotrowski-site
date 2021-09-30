@@ -45,13 +45,16 @@ public set imageURL(val){
       return this._source;
   }
   public set source(value) {
-    console.log(`SET VID: ${value}.`)
+    console.log(`SET VID: ${value}. from ${this._source}`)
       if (this._source !== value) {
           this._source = value;
           // if (!this._isEnabled){
           //   return
           // }
           
+      }
+      else {
+        return
       }
       // console.log(value)
       if (this._source === ""){
