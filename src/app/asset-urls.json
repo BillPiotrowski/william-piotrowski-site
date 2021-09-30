@@ -2,17 +2,17 @@
     "urls": [
         {
             "url": "/",
-            "video": "home-bg-light.mp4",
+            "video": "home-bg-dark.mp4",
             "audio": ""
         },
         {
             "url": "/biography",
-            "video": "home-bg-light.mp4",
+            "video": "home-bg-dark.mp4",
             "audio": ""
         },
         {
             "url": "/repertorium",
-            "video": "home-bg-light.mp4",
+            "video": "home-bg-dark.mp4",
             "audio": ""
         },
         {
@@ -22,17 +22,17 @@
         },
         {
             "url": "/darklore-manor",
-            "video": "",
+            "video": "darklore.mp4",
             "audio": "sanctuary-of-shadows.mp3"
         },
         {
             "url": "/necronomicon",
-            "video": "",
+            "video": "necronomicon.mp4",
             "audio": "the-stars-alight.m4a"
         },
         {
             "url": "/winters-knight",
-            "video": "",
+            "video": "winters-knight.mp4",
             "audio": "winters-knight-medley.m4a"
         },
         {
@@ -42,27 +42,27 @@
         },
         {
             "url": "/carnival-of-lost-souls",
-            "video": "",
+            "video": "carnival.mp4",
             "audio": "carnival-medley.m4a"
         },
         {
             "url": "/blood-of-the-dragon",
-            "video": "",
+            "video": "dragon.mp4",
             "audio": "dragon-medley.m4a"
         },
         {
             "url": "/shadow-of-the-raven",
-            "video": "",
+            "video": "raven.mp4",
             "audio": "raven-medley.mp3"
         },
         {
             "url": "/grimm-tales",
-            "video": "",
+            "video": "grimm.mp4",
             "audio": "grimm-medley.mp3"
         },
         {
             "url": "/phantoms-of-the-high-seas",
-            "video": "",
+            "video": "pirates.mp4",
             "audio": "phantoms-medley.mp3"
         },
         {

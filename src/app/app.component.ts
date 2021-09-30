@@ -11,6 +11,7 @@ import { GlobalNavComponent } from './global-nav/global-nav.component';
 import { Router, Event, NavigationStart, RouterOutlet } from '@angular/router';
 import { slideInAnimation } from './animations'
 import { AudioService } from './audio.service';
+import { VideoService } from './video.service';
 import assetURLS from './asset-urls.json'; 
 
 
@@ -52,7 +53,8 @@ export class AppComponent {
   
   constructor(
     private router: Router,
-    private audioService: AudioService
+    private audioService: AudioService,
+    private videoService: VideoService
   ) { 
     console.log("assets:")
     console.log(assetURLS)
@@ -75,70 +77,33 @@ export class AppComponent {
       }
     })
     // Required for auto play in chrome
-    this.videoplayer.nativeElement.play();
+    // this.videoplayer.nativeElement.play();
   }
 
   ngAfterViewInit(){
 
+    this.videoService.setVideoPlayer(this.videoplayer.nativeElement)
     this.router.events.subscribe( (e) => {
       if (e instanceof NavigationStart) {
-        const vidSrc = this.videoplayer.nativeElement.src
-        if (e.url === "/grey-cardinal" && vidSrc != "http://localhost:4200/assets/video/greyCardinal.mp4") {
-          this.videoSource = "http://localhost:4200/assets/video/greyCardinal.mp4"
-          this.videoplayer.nativeElement.loop = true
-        } else if (e.url === "/darklore-manor" && vidSrc != "http://localhost:4200/assets/video/darklore.mp4") {
-          this.videoSource = "http://localhost:4200/assets/video/darklore.mp4"
-          this.videoplayer.nativeElement.loop = true
-        } else if (e.url === "/transylvania" && vidSrc != "http://localhost:4200/assets/video/transylvania.mp4") {
-          this.videoSource = "http://localhost:4200/assets/video/transylvania.mp4"
-          this.videoplayer.nativeElement.loop = true
-        } else if (e.url === "/winters-knight" && vidSrc != "http://localhost:4200/assets/video/winters-knight.mp4") {
-          this.videoSource = "http://localhost:4200/assets/video/winters-knight.mp4"
-          this.videoplayer.nativeElement.loop = true
-        } else if (e.url === "/necronomicon" && vidSrc != "http://localhost:4200/assets/video/necronomicon.mp4") {
-          this.videoSource = "http://localhost:4200/assets/video/necronomicon.mp4"
-          this.videoplayer.nativeElement.loop = true
-        } else if (e.url === "/carnival-of-lost-souls" && vidSrc != "http://localhost:4200/assets/video/carnival.mp4") {
-          this.videoSource = "http://localhost:4200/assets/video/carnival.mp4"
-          this.videoplayer.nativeElement.loop = true
-        } else if (e.url === "/blood-of-the-dragon" && vidSrc != "http://localhost:4200/assets/video/dragon.mp4") {
-          this.videoSource = "http://localhost:4200/assets/video/dragon.mp4"
-          this.videoplayer.nativeElement.loop = true
-        } else if (e.url === "/shadow-of-the-raven" && vidSrc != "http://localhost:4200/assets/video/raven.mp4") {
-          this.videoSource = "http://localhost:4200/assets/video/raven.mp4"
-          this.videoplayer.nativeElement.loop = true
-        } else if (e.url === "/grimm-tales" && vidSrc != "http://localhost:4200/assets/video/grimm.mp4") {
-          this.videoSource = "http://localhost:4200/assets/video/grimm.mp4"
-          this.videoplayer.nativeElement.loop = true
-        } else if (e.url === "/phantoms-of-the-high-seas" && vidSrc != "http://localhost:4200/assets/video/pirates.mp4") {
-          this.videoSource = "http://localhost:4200/assets/video/pirates.mp4"
-          this.videoplayer.nativeElement.loop = true
-        } else if (vidSrc != "http://localhost:4200/assets/video/home-bg-dark.mp4") {
-          this.videoSource = "http://localhost:4200/assets/video/home-bg-dark.mp4"
-        }
-        // if (e.url === "/") {
-        //     this.routeHidden = false;
-            
-        //     console.log("hide nav")
-        // } else {
-        //     this.routeHidden = true;
-        //     console.log("show nav")
-        // }
 
-        // if(!this.audioService.isEnabled){ return }
-    
-        // const parsedURL = this.router.parseUrl(e.url)
-        // console.log(`PARSED URL: ${parsedURL}. and url: ${e.url}`)
         const urlAssets: any = assetURLS.urls.find(obj => obj.url == e.url)
         if (urlAssets == null){
           return
         }
         const audioFileName = urlAssets['audio']
-        if(audioFileName != null && urlAssets['audio'] != ""){
-          this.audioService.source = `/assets/audio/${urlAssets['audio']}`
+        const videoFileName = urlAssets['video']
+
+        if(audioFileName != null && audioFileName != ""){
+          this.audioService.source = `/assets/audio/${audioFileName}`
         }
         else {
           this.audioService.source = ""
+        }
+
+        if(videoFileName != null && videoFileName != ""){
+          this.videoService.source = `/assets/video/${videoFileName}`
+        } else {
+          this.videoService.source = "/assets/video/home-bg-dark.mp4"
         }
 
 
@@ -157,16 +122,6 @@ export class AppComponent {
 
   title = 'williamPiotrowski';
 
-  vidEnded() {
-    // console.log("video ended");
-    // console.log(this.videoSource)
-    if (this.videoSource === "/assets/video/opening-title-01.mp4") {
-      this.videoSource = "/assets/video/home-bg-dark.mp4"
-      this.videoplayer.nativeElement.play();
-      this.videoplayer.nativeElement.loop = true
-    }
-    // this.leavePage();
-  }
   addItem() {
     this.audioService.toggleEnable()
   }
