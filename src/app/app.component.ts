@@ -86,11 +86,32 @@ export class AppComponent {
         if (e.url === "/grey-cardinal" && vidSrc != "http://localhost:4200/assets/video/greyCardinal.mp4") {
           this.videoSource = "http://localhost:4200/assets/video/greyCardinal.mp4"
           this.videoplayer.nativeElement.loop = true
-        } else if (e.url === "/darklore-manor" && vidSrc != "http://localhost:4200/assets/video/darklore-manor.mp4") {
-          this.videoSource = "http://localhost:4200/assets/video/darklore-manor.mp4"
+        } else if (e.url === "/darklore-manor" && vidSrc != "http://localhost:4200/assets/video/darklore.mp4") {
+          this.videoSource = "http://localhost:4200/assets/video/darklore.mp4"
           this.videoplayer.nativeElement.loop = true
-        }  else if (e.url === "/transylvania" && vidSrc != "http://localhost:4200/assets/video/transylvania.mp4") {
+        } else if (e.url === "/transylvania" && vidSrc != "http://localhost:4200/assets/video/transylvania.mp4") {
           this.videoSource = "http://localhost:4200/assets/video/transylvania.mp4"
+          this.videoplayer.nativeElement.loop = true
+        } else if (e.url === "/winters-knight" && vidSrc != "http://localhost:4200/assets/video/winters-knight.mp4") {
+          this.videoSource = "http://localhost:4200/assets/video/winters-knight.mp4"
+          this.videoplayer.nativeElement.loop = true
+        } else if (e.url === "/necronomicon" && vidSrc != "http://localhost:4200/assets/video/necronomicon.mp4") {
+          this.videoSource = "http://localhost:4200/assets/video/necronomicon.mp4"
+          this.videoplayer.nativeElement.loop = true
+        } else if (e.url === "/carnival-of-lost-souls" && vidSrc != "http://localhost:4200/assets/video/carnival.mp4") {
+          this.videoSource = "http://localhost:4200/assets/video/carnival.mp4"
+          this.videoplayer.nativeElement.loop = true
+        } else if (e.url === "/blood-of-the-dragon" && vidSrc != "http://localhost:4200/assets/video/dragon.mp4") {
+          this.videoSource = "http://localhost:4200/assets/video/dragon.mp4"
+          this.videoplayer.nativeElement.loop = true
+        } else if (e.url === "/shadow-of-the-raven" && vidSrc != "http://localhost:4200/assets/video/raven.mp4") {
+          this.videoSource = "http://localhost:4200/assets/video/raven.mp4"
+          this.videoplayer.nativeElement.loop = true
+        } else if (e.url === "/grimm-tales" && vidSrc != "http://localhost:4200/assets/video/grimm.mp4") {
+          this.videoSource = "http://localhost:4200/assets/video/grimm.mp4"
+          this.videoplayer.nativeElement.loop = true
+        } else if (e.url === "/phantoms-of-the-high-seas" && vidSrc != "http://localhost:4200/assets/video/pirates.mp4") {
+          this.videoSource = "http://localhost:4200/assets/video/pirates.mp4"
           this.videoplayer.nativeElement.loop = true
         } else if (vidSrc != "http://localhost:4200/assets/video/home-bg-dark.mp4") {
           this.videoSource = "http://localhost:4200/assets/video/home-bg-dark.mp4"

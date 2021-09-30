@@ -6,24 +6,69 @@
             "audio": ""
         },
         {
-            "url": "/grey-cardinal",
-            "video": "greyCardinal.mp4",
-            "audio": "grey-cardinal.mp3"
-        },
-        {
             "url": "/biography",
             "video": "home-bg-light.mp4",
             "audio": ""
         },
         {
+            "url": "/repertorium",
+            "video": "home-bg-light.mp4",
+            "audio": ""
+        },
+        {
+            "url": "/grey-cardinal",
+            "video": "greyCardinal.mp4",
+            "audio": "grey-cardinal.mp3"
+        },
+        {
             "url": "/darklore-manor",
             "video": "",
-            "audio": "06_Sanctuary_Of_Shadows.mp3"
+            "audio": "sanctuary-of-shadows.mp3"
+        },
+        {
+            "url": "/necronomicon",
+            "video": "",
+            "audio": "the-stars-alight.m4a"
+        },
+        {
+            "url": "/winters-knight",
+            "video": "",
+            "audio": "winters-knight-medley.m4a"
         },
         {
             "url": "/transylvania",
             "video": "transylvania.mp4",
-            "audio": "06_Sanctuary_Of_Shadows.mp3"
+            "audio": "transylvania-medley.m4a"
+        },
+        {
+            "url": "/carnival-of-lost-souls",
+            "video": "",
+            "audio": "carnival-medley.m4a"
+        },
+        {
+            "url": "/blood-of-the-dragon",
+            "video": "",
+            "audio": "dragon-medley.m4a"
+        },
+        {
+            "url": "/shadow-of-the-raven",
+            "video": "",
+            "audio": "raven-medley.mp3"
+        },
+        {
+            "url": "/grimm-tales",
+            "video": "",
+            "audio": "grimm-medley.mp3"
+        },
+        {
+            "url": "/phantoms-of-the-high-seas",
+            "video": "",
+            "audio": "phantoms-medley.mp3"
+        },
+        {
+            "url": "/blood-of-angels",
+            "video": "",
+            "audio": "blood-of-angels.m4a"
         }
     ]
 }

@@ -39,14 +39,14 @@ import {
 })
 export class BiographyComponent implements OnInit {
 
-  isBiographyOpen = false; // decorate the property with @Input()
+  // isBiographyOpen = false; // decorate the property with @Input()
   constructor() { }
 
   ngOnInit(): void {
     // this.isBiographyOpen = true
   }
-  ngAfterViewChecked(): void{
-    this.isBiographyOpen = true
-  }
+  // ngAfterViewChecked(): void{
+  //   this.isBiographyOpen = true
+  // }
 
 }
