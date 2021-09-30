@@ -7,14 +7,18 @@ import { Output, EventEmitter } from '@angular/core';
   styleUrls: ['./transport-control.component.css']
 })
 export class TransportControlComponent implements OnInit {
-  @Output() newItemEvent = new EventEmitter<void>();
+  @Output() toggleAudioEvent = new EventEmitter<void>();
+  @Output() toggleVideoEvent = new EventEmitter<void>();
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  addNewItem() {
-    this.newItemEvent.emit();
+  toggleAudio() {
+    this.toggleAudioEvent.emit();
+  }
+  toggleVideo() {
+    this.toggleVideoEvent.emit();
   }
 
 }

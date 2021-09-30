@@ -122,8 +122,11 @@ export class AppComponent {
 
   title = 'williamPiotrowski';
 
-  addItem() {
+  toggleAudio() {
     this.audioService.toggleEnable()
+  }
+  toggleVideo(){
+    this.videoService.toggleEnable()
   }
 
 }
