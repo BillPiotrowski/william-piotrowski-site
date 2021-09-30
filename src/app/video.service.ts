@@ -45,6 +45,7 @@ public set imageURL(val){
       return this._source;
   }
   public set source(value) {
+    console.log(`SET VID: ${value}.`)
       if (this._source !== value) {
           this._source = value;
           // if (!this._isEnabled){

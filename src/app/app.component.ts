@@ -90,8 +90,7 @@ export class AppComponent {
     this.router.events.subscribe( (e) => {
       // console.log(`nav event: ${e}`)
       if (e instanceof NavigationEnd) {
-
-        const className = e.url.slice(1);
+        const className = classNameFromURL(e.url)
         this.container.nativeElement.classList.add(className)
         this.prevURL = className
       }
@@ -106,9 +105,7 @@ export class AppComponent {
 
         
         const urlAssets: any = assetURLS.urls.find(obj => obj.url == e.url)
-        if (urlAssets === null){
-          // this.videoService.source = ""
-          // this.audioService.source = ""
+        if (!urlAssets || urlAssets === null){
           return
         }
         const audioFileName = urlAssets['audio']
@@ -158,3 +155,15 @@ export class AppComponent {
 
 }
 
+
+// Input is a string with leading '/'.
+// Returns the name with first '/' removed.
+// If page is root (home) returns string of "home" as name.
+function classNameFromURL(url:string):string {
+  const className = url.slice(1);
+  if (className === ""){
+    return "home"
+  } else {
+    return className
+  }
+}
