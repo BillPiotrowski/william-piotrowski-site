@@ -283,6 +283,8 @@ em {
       display: block;
       background: url(/assets/images/rules/vertical-rule-double.png) repeat-y right;
       padding-right: 8px;
+      width: 27%;
+      /* max-width: ; */
       /* margin-right: .5rem; */
   }
   #musicItem #details h2, #musicItem #description h2 {
