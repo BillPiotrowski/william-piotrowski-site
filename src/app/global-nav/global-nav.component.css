@@ -1,12 +1,21 @@
-.open-close-container {
-    overflow: hidden;
+
+nav {
+    padding: .25rem .75rem .5rem;
+    background: aquamarine;
     background: #0b0b0b;
+    position: absolute;
+    top: 0;
+}
+nav ul {
+    display: flex;
 }
 
 nav ul li {
-    float: left;
-    list-style: none;
-    margin-right: 12px;
+    /* float: left; */
+    margin-right: 1.75rem;
+}
+nav ul li:last-child {
+    margin-right: .75rem;
 }
 nav ul li a {
     /* text-decoration: none; */
@@ -27,6 +36,20 @@ nav ul li a.active {
     color: #601717;
 }
 
-#homeLink img {
-    width: 50px;
+#homeLink {
+    /* background: lime; */
+    margin-top: 0.375rem;
 }
+#homeLink a {
+    /* width: 50px; */
+    display: block;
+    width: 2.875rem;
+    height: 2.3125rem;
+    background: url(/assets/images/william-piotrowski-logo.png) no-repeat;
+    background-size: 100% 200%;
+    text-indent: -2000px;
+}
+#homeLink a:hover {
+    background-position-y: 100%;
+}
+

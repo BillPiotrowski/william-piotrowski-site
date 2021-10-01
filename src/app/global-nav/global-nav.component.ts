@@ -16,19 +16,21 @@ import {
       // ...
       state('open', style({
         height: '3em',
+        top: '0'
         // opacity: 1,
         // backgroundColor: 'yellow'
       })),
       state('closed', style({
         height: '0px',
+        top: '-3.75rem'
         // opacity: 0.8,
         // backgroundColor: '#c6ecff'
       })),
       transition('open => closed', [
-        animate('0.2s')
+        animate('0.6s ease-out')
       ]),
       transition('closed => open', [
-        animate('0.5s')
+        animate('0.6s ease-in')
       ]),
     ]),
   ],
