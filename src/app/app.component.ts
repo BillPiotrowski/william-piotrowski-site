@@ -50,6 +50,16 @@ export class AppComponent {
 
   // Users: any = assetURLS;
 
+  public get isAudioEnabled(){
+    return this.audioService.isEnabled
+  }
+  public get isVideoEnabled(){
+    return this.videoService.isEnabled
+  }
+  // isAudioEnabled = function (){
+  //   return this.videoService.isEnabled
+  // }
+
   private prevURL?: string
   
   constructor(

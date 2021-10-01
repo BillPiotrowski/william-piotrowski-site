@@ -1,6 +1,6 @@
 <div>
     <ul>
-        <li><a (click)="toggleAudio()">Mute / Unmute</a></li>
-        <li><a (click)="toggleVideo()">Stop / Start Video</a></li>
+        <li><a (click)="toggleAudio()">{{ isAudioEnabled ? 'disable audio' : 'enable audio' }}</a></li>
+        <li><a (click)="toggleVideo()">{{ isVideoEnabled ? 'disable video' : 'enable video' }}</a></li>
     </ul>
 </div>

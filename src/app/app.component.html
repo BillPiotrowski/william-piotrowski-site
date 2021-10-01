@@ -15,7 +15,7 @@
     </div>
   
     <div #transportControl id="transportControl">
-      <app-transport-control (toggleAudioEvent)="toggleAudio()" (toggleVideoEvent)="toggleVideo()"></app-transport-control>
+      <app-transport-control (toggleAudioEvent)="toggleAudio()" (toggleVideoEvent)="toggleVideo()" [isAudioEnabled]="isAudioEnabled" [isVideoEnabled]="isVideoEnabled"></app-transport-control>
     </div>
 
 
