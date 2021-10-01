@@ -9,11 +9,14 @@
 }
 ul {
     margin: 0 10%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
 }
 
 ul#catalog li {
     list-style: none;
-    float: left;
+    /* float: left; */
     margin: 0;
 
     width: 25%;
