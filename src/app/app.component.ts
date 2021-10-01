@@ -23,7 +23,6 @@ import assetURLS from './asset-urls.json';
   styleUrls: ['./app.component.css'],
   animations: [
     slideInAnimation
-    // animation triggers go here
   ]
 })
 

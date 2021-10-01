@@ -144,6 +144,7 @@ em {
   width: 100%;
   /* max-width: 500px; */
   /* opacity: 0.9; */
+  z-index: 7;
 }
 #musicItem .wrapper {
   background: #333;
