@@ -1,18 +1,12 @@
 nav {
     position: absolute;
     z-index: 7;
-    background: lime;
     width: 80%;
     height: 20px;
-    /* margin: 0 auto; */
     left: 10%;
     height: 23.979328165374677vw;
-    background: none;
     top: 50%;
     margin-top: -16vw;
-}
-nav ul {
-    background: aqua;
 }
 nav ul li {
     position: absolute;
@@ -22,61 +16,43 @@ nav ul li {
 nav ul li#repertorium {
     width: 37.467700258397933%;
     left: 0;
-    /* background: red; */
 }
 nav ul li#biography {
     width: 31.266149870801034%;
     left: 37.467700258397933%;
-    /* background: yellow; */
 }
 nav ul li#correspond {
     width: 31.266149870801034%;
     left: 68.733850129198967%;
-    /* background: blueviolet; */
 }
 
 
 
-/* nav ul li {
-    float: left;
-    list-style: none;
-} */
 nav ul li a {
     display: block;
     width: 100%;
     height: 100%;
-    /* width: 402px; */
-    /* height: 326px; */
-    /* width: 380px; */
-    /* background-size: contain; */
-    background-repeat: no-repeat no-repeat;
-    /* background-position: top left; */
+    background-repeat: no-repeat;
     background-image: url(/assets/images/hands-24.png);
 }
 nav ul li#repertorium a {
-    /* background-size: 725px 580px; */
     background-size: 266.896551724137931% 200%;
-    /* background-size: 45.3125rem 36.25rem; */
+}
+nav ul li#biography a {
+    background-size: 319.834710743801653% 200%;
+    background-position-x: 55%;
+}
+nav ul li#correspond a {
+    background-size: 319.834710743801653% 200%;
+    background-position-x: 100%;
 }
 nav ul li a:hover {
     background-position-y: 100%;
-    /* background-image: url(/assets/images/flute.png); */
 }
-nav ul li#biography a {
-    /* background-size: 605px 580px; */
-    background-size: 319.834710743801653% 200%;
-    background-position-x: 55%;
-    /* background-image: url(/assets/images/mask-hand.png); */
-}
-nav ul li#biography a:hover {
-    /* background-image: url(/assets/images/mask.png); */
-}
-nav ul li#correspond a {
-    /* background-size: 605px 580px; */
-    background-size: 319.834710743801653% 200%;
-    background-position-x: 100%;
-    /* background-image: url(/assets/images/raven-hand.png); */
-}
-nav ul li#correspond a:hover {
-    /* background-image: url(/assets/images/raven.png); */
+
+
+@media (hover: none) {
+    nav ul li a {
+        background-position-y: 100%;
+    }
 }
