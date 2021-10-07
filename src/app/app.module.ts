@@ -95,7 +95,8 @@ import { ShadowOfTheRavenComponent } from './music/shadow-of-the-raven/shadow-of
       { path: 'crimson-winter', component: CrimsonWinterComponent, data: {animation: 'MusicItemPage'} },
       { path: '',   redirectTo: '/crimson-winter', pathMatch: 'full' },
       // { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
-    ]),
+    ], {scrollPositionRestoration: 'enabled'}),
+    // https://stackoverflow.com/questions/39601026/angular-2-scroll-to-top-on-route-change
   ],
   providers: [],
   bootstrap: [AppComponent]
