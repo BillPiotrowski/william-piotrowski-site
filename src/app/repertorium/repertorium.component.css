@@ -14,14 +14,24 @@ ul {
     padding-bottom: 20px;
 }
 
+
+
+
+/* 
+    VW = 1,450 (ideal width)
+    VW * .8 * .25 = 290 (static width of image)
+
+    Static height = 310
+    h = x * VW
+    310 = X * 1450
+
+    X = 0.213793103448276
+*/
 ul#catalog li {
     list-style: none;
-    /* float: left; */
     margin: 0;
-
     width: 25%;
     height: 21.379310344827586vw;
-    /* background: lime */
 }
 ul#catalog li a {
     /* margin: 0; */
@@ -80,4 +90,40 @@ ul#catalog li#bloodOfAngels a {
 }
 ul#catalog li#crimsonWinter a {
     background-position-x: 100%;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+/* 
+        VW = 725 (ideal width)
+        VW * .8 * .5 = 290 (static width of image)
+
+        Static height = 310
+        h = x * VW
+        310 = X * 725
+
+        X = 0.427586206896552
+*/
+    ul#catalog li {
+        width: 50%;
+        height: 42.758620689655172vw;
+    }
+    /* ul {
+        margin: 0 4%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+    }
+
+    ul#catalog li {
+        list-style: none;
+        margin: 0;
+
+        width: 25%;
+        height: 21.379310344827586vw;
+    } */
 }
