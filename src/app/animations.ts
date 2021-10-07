@@ -40,28 +40,43 @@ const hideToLeft = query(':leave .content',[animate(leavingTime, style({ left: '
 const hideToRight = query(':leave .content',[animate(leavingTime, style({ left: '100%' }))])
 const hideToBottom = query(':leave .content',[animate(leavingTime, style({ top: '100%' }))])
 
-const prepareToShowHomeRepertorium = query(':enter li#repertorium', [
-  style({
-    left: '-100%'
-  })
-])
-const prepareToShowHomeBiography = query(':enter li#biography', [
-  style({
-    top: '200%'
-  })
-])
-const prepareToShowHomeCorrespond = query(':enter li#correspond', [
-  style({
-    left: '200%'
-  })
-])
+// const prepareToShowHomeRepertorium = query(':enter li#repertorium', [
+//   style({
+//     left: '-100%'
+//   })
+// ])
+// const prepareToShowHomeBiography = query(':enter li#biography', [
+//   style({
+//     top: '200%'
+//   })
+// ])
+// const prepareToShowHomeCorrespond = query(':enter li#correspond', [
+//   style({
+//     left: '200%'
+//   })
+// ])
 
-const showHome = group([
-  query(':enter li#repertorium',[animate('0.3s ease-out', style({ left: '0' }))]),
-  query(':enter li#biography',[animate('0.4s ease-out', style({ top: '0' }))]),
-  query(':enter li#correspond',[animate('0.5s ease-out', style({ left: '68.733850129198967%' }))])
+// const showHome = group([
+  // query(':enter li#repertorium',[
+  //   animate(
+  //     '0.4s ease-out',
+  //     // style({ left: '0' })
+  //   )
+  // ]),
+  // query(':enter li#biography',[
+  //   animate(
+  //     '0.3s ease-out',
+  //     // style({ top: '0' })
+  //   )
+  // ]),
+  // query(':enter li#correspond',[
+  //   animate(
+  //     '0.5s ease-out',
+  //     // style({ left: '68.733850129198967%' })
+  //   )
+  // ])
 
-])
+// ])
 
 export const slideInAnimation = trigger(
   'routeAnimations',
@@ -73,39 +88,54 @@ export const slideInAnimation = trigger(
     // ---------------------------------  TO HOME ---------------------------------------------
 
     transition('RepertoriumPage => HomePage', [
-      prepareToShowHomeRepertorium,
-      prepareToShowHomeBiography,
-      prepareToShowHomeCorrespond,
+      // prepareToShowHomeRepertorium,
+      // prepareToShowHomeBiography,
+      // prepareToShowHomeCorrespond,
       sequence([
         hideToRight,
-        showHome
+        // showHome
+        query('@*', animateChild()),
       ])
     ]),
     transition('ContactPage => HomePage', [
-      prepareToShowHomeRepertorium,
-      prepareToShowHomeBiography,
-      prepareToShowHomeCorrespond,
+      // prepareToShowHomeRepertorium,
+      // prepareToShowHomeBiography,
+      // prepareToShowHomeCorrespond,
       sequence([
         hideToLeft,
-        showHome
+        // showHome
+        query('@*', animateChild()),
       ])
     ]),
     transition('BiographyPage => HomePage', [
-      prepareToShowHomeRepertorium,
-      prepareToShowHomeBiography,
-      prepareToShowHomeCorrespond,
+      // prepareToShowHomeRepertorium,
+      // prepareToShowHomeBiography,
+      // prepareToShowHomeCorrespond,
       sequence([
         hideToRight,
-        showHome
+        // showHome,
+        query('@*', animateChild()),
       ])
     ]),
+    // transition(("ContactPage", "HomePage", null, {"temp":"asdf"},[
+
+    //   prepareToShowHomeRepertorium,
+    //   prepareToShowHomeBiography,
+    //   prepareToShowHomeCorrespond,
+    //   sequence([
+    //     hideToLeft,
+    //     showHome
+    //   ])
+    // ]
+    // )),
     transition('MusicItemPage => HomePage', [
-      prepareToShowHomeRepertorium,
-      prepareToShowHomeBiography,
-      prepareToShowHomeCorrespond,
+      // prepareToShowHomeRepertorium,
+      // prepareToShowHomeBiography,
+      // prepareToShowHomeCorrespond,
       sequence([
         hideToBottom,
-        showHome
+        // showHome
+        query('@*', animateChild()),
       ])
     ]),
 
