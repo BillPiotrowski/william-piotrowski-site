@@ -54,6 +54,11 @@ export class VideoService {
   // Should thie become a method and return a Promise??
   public set source(value) {
 
+    // guard video player exists
+    if(!this._videoPlayer){
+      return
+    }
+
     // guard that source value is new
     // Should it also verify that the _videoPlayer.src === value ?
     if (this._source !== value) {
@@ -76,6 +81,7 @@ export class VideoService {
     if(this._isEnabled) {
 
       // this.makeStatic()
+      this._videoPlayer.src = ""
 
       // Using fetch instead of letting video player set source because it seems better for caching:
       // https://stackoverflow.com/questions/52220696/how-to-cache-mp4-video-for-the-html-video-tag

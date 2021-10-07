@@ -47,11 +47,16 @@ Video height goes to 50% while animating and then back to 100% afterwards.
 }
 
 
-
+/*
+    Using vw / vh for same reason as videoContainer above.
+    Eventually static and video container should probably become the same object?
+*/
 #staticBG {
     position: fixed;
     width: 100%;
     height: 100%;
+    width: 100vw;
+    height: 100vh;
     top: 0;
     left: 0;
     z-index: 5;
