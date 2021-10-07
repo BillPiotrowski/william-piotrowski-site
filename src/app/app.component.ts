@@ -5,6 +5,7 @@ import {
   style,
   animate,
   transition,
+  
   // ...
 } from '@angular/animations';
 import { GlobalNavComponent } from './global-nav/global-nav.component';
@@ -23,7 +24,13 @@ import assetURLS from './asset-urls.json';
   styleUrls: ['./app.component.css'],
   animations: [
     slideInAnimation
-  ]
+  ],
+  host: {
+    // '[@routeAnimations]': 'someExpression',
+    // '(@routeAnimations.start)': 'captureStartEvent($event)',
+    // '(@routeAnimations.done)': 'captureDoneEvent($event)',
+    // '(@routeAnimations)': 'onAnimationEvent2($event)'
+  },
 })
 
 @Injectable({
