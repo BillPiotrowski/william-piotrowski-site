@@ -1,6 +1,6 @@
 <div>
-    <ul>
-        <li><a (click)="toggleAudio()">{{ isAudioEnabled ? 'disable audio' : 'enable audio' }}</a></li>
-        <li><a (click)="toggleVideo()">{{ isVideoEnabled ? 'disable video' : 'enable video' }}</a></li>
+    <ul id="transport">
+        <li id="enableVideo"><a (click)="toggleVideo()" class="{{ isVideoEnabled ? '' : 'inactive' }}">{{ isVideoEnabled ? 'disable video' : 'enable video' }}</a></li>
+        <li id="enableAudio"><a (click)="toggleAudio()" class="{{ isAudioEnabled ? '' : 'inactive' }}">{{ isAudioEnabled ? 'disable audio' : 'enable audio' }}</a></li>
     </ul>
 </div>
