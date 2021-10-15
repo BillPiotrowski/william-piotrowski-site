@@ -11,12 +11,22 @@ body {
     left: 0;
     z-index: 50;
 }
+
 #transportControl {
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 45;
+    z-index: 55;
 }
+
+
+@media screen and (max-width: 600px) {
+
+    #globalNav {
+        width: 100%
+    }
+}
+
 
 /*
 Using vw and vh for width and height because when set to 100%,

@@ -53,3 +53,22 @@ nav ul li a.active {
     background-position-y: 100%;
 }
 
+
+@media screen and (max-width: 600px) {
+
+    nav {
+        width: 100%;
+    }
+    nav ul li {
+        display: none;
+    }
+    #homeLink a {
+        background: url(/assets/images/mobile-menu-2x.png) no-repeat;
+        width: 2.4375rem;
+        height: 2.125rem;
+        background-size: 100% 200%;
+    }
+    nav ul li#homeLink {
+        display: block;
+    }
+}
