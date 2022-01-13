@@ -232,7 +232,7 @@ em {
   height: 2.625em;
   overflow: hidden;
   text-indent: -2000px;
-  background-size: 30em 13.125em;
+  background-size: 30em 15.75em;
 }
 #musicItem #listeningOptions ul li#stream-spotify a{
   width: 8em;
@@ -252,6 +252,10 @@ em {
 #musicItem #listeningOptions ul li#purchase-amazon a{
   width: 7em;
   background-position-y: -10.5em;
+}
+#musicItem #listeningOptions ul li#stream-soundcloud a{
+  width: 3.59375em;
+  background-position-y: -13.125em;
 }
 #musicItem #listeningOptions ul li a:hover{
   background-position-x: -15em;

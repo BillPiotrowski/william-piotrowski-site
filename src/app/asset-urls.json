@@ -90,6 +90,16 @@
             "url": "/you-cant-put-your-arms-around-a-memory",
             "video": "",
             "audio": "memory.m4a"
+        },
+        {
+            "url": "/what-separates-us",
+            "video": "",
+            "audio": "what-separates-us.mp3"
+        },
+        {
+            "url": "/endless-night",
+            "video": "",
+            "audio": "endless-night.mp3"
         }
     ]
 }

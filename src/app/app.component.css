@@ -126,6 +126,12 @@ Video height goes to 50% while animating and then back to 100% afterwards.
 .grey-cardinal #staticBG.static {
     background-image: url(/assets/images/static-bg/grey-cardinal.jpg);
 }
+.what-separates-us #staticBG.static {
+    background-image: url(/assets/images/static-bg/what-separates-us.jpg);
+}
+.endless-night #staticBG.static {
+    background-image: url(/assets/images/static-bg/endless-night.jpg);
+}
 
 /* 
 #staticBG.static {

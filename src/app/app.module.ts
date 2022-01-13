@@ -26,6 +26,8 @@ import { BloodOfAngelsComponent } from './music/blood-of-angels/blood-of-angels.
 import { CrimsonWinterComponent } from './music/crimson-winter/crimson-winter.component';
 import { YouCantPutYourArmsComponent } from './music/you-cant-put-your-arms/you-cant-put-your-arms.component';
 import { ShadowOfTheRavenComponent } from './music/shadow-of-the-raven/shadow-of-the-raven.component';
+import { WhatSeparatesUsComponent } from './music/what-separates-us/what-separates-us.component';
+import { EndlessNightComponent } from './music/endless-night/endless-night.component';
 
 
 
@@ -51,7 +53,9 @@ import { ShadowOfTheRavenComponent } from './music/shadow-of-the-raven/shadow-of
     BloodOfAngelsComponent,
     CrimsonWinterComponent,
     YouCantPutYourArmsComponent,
-    ShadowOfTheRavenComponent
+    ShadowOfTheRavenComponent,
+    WhatSeparatesUsComponent,
+    EndlessNightComponent
   ],
   imports: [
     BrowserModule,
@@ -94,6 +98,10 @@ import { ShadowOfTheRavenComponent } from './music/shadow-of-the-raven/shadow-of
       { path: '',   redirectTo: '/phantoms-of-the-high-seas', pathMatch: 'full' },
       { path: 'crimson-winter', component: CrimsonWinterComponent, data: {animation: 'MusicItemPage'} },
       { path: '',   redirectTo: '/crimson-winter', pathMatch: 'full' },
+      { path: 'what-separates-us', component: WhatSeparatesUsComponent, data: {animation: 'MusicItemPage'} },
+      { path: '',   redirectTo: '/what-separates-us', pathMatch: 'full' },
+      { path: 'endless-night', component: EndlessNightComponent, data: {animation: 'MusicItemPage'} },
+      { path: '',   redirectTo: '/endless-night', pathMatch: 'full' },
       // { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
     ], {scrollPositionRestoration: 'enabled'}),
     // https://stackoverflow.com/questions/39601026/angular-2-scroll-to-top-on-route-change

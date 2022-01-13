@@ -43,7 +43,7 @@ ul#catalog li a {
     height: 100%;
     /* background: center center no-repeat; */
     background: url(/assets/images/contact-sheet-bw.png) no-repeat;
-    background-size: 1400% 100%;
+    background-size: 1600% 100%;
     /* 290 x 310 */
 }
 ul#catalog li a:hover {
@@ -51,44 +51,52 @@ ul#catalog li a:hover {
 }
 
 ul#catalog li#lonesomeTown a {
-    background-position-x: 7.692307692307692%;
+    background-position-x: 6.666666666666667%;
 }
 ul#catalog li#darkloreManor a {
-    background-position-x: 15.384615384615384%;
+    background-position-x: 13.333333333333333%;
 }
 ul#catalog li#necronomicon a {
-    background-position-x: 23.076923076923076%;
+    background-position-x: 20%;
 }
 ul#catalog li#transylvania a {
-    background-position-x: 30.769230769230768%;
+    background-position-x: 26.666666666666667%;
 }
 ul#catalog li#wintersKnight a {
-    background-position-x: 38.46153846153846%;
+    background-position-x: 33.333333333333334%;
 }
 ul#catalog li#carnival a {
-    background-position-x: 46.153846153846152%;
+    background-position-x: 40%;
 }
 ul#catalog li#bloodOfTheDragon a {
-    background-position-x: 53.846153846153844%;
+    background-position-x: 46.666666666666667%;
 }
 
 
 ul#catalog li#memory a {
-    background-position-x: 61.538461538461536%;
+    background-position-x: 53.333333333333334%;
 }
 ul#catalog li#shadowOfTheRaven a {
-    background-position-x: 69.230769230769228%;
+    background-position-x: 60%;
 }
 ul#catalog li#grimmTales a {
-    background-position-x: 76.92307692307692%;
+    background-position-x: 66.666666666666667%;
 }
 ul#catalog li#phantomsOfTheHighSeas a {
-    background-position-x: 84.615384615384612%;
+    background-position-x: 73.333333333333334%;
 }
 ul#catalog li#bloodOfAngels a {
-    background-position-x: 92.307692307692304%;
+    background-position-x: 80%;
 }
 ul#catalog li#crimsonWinter a {
+    background-position-x: 86.666666666666667%;
+}
+
+ul#catalog li#wsu a {
+    background-position-x: 93.333333333333334%;
+}
+
+ul#catalog li#endlessNight a {
     background-position-x: 100%;
 }
 
