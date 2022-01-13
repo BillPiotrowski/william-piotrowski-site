@@ -132,8 +132,3 @@ Video height goes to 50% while animating and then back to 100% afterwards.
 .endless-night #staticBG.static {
     background-image: url(/assets/images/static-bg/endless-night.jpg);
 }
-
-/* 
-#staticBG.static {
-    background: url(/assets/images/Skull_03.png) repeat;
-} */
