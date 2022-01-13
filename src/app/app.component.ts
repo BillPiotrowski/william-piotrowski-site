@@ -89,10 +89,10 @@ export class AppComponent {
         if (e.url === "/") {
             this.routeHidden = false;
             
-            console.log("hide nav")
+            // console.log("hide nav")
         } else {
             this.routeHidden = true;
-            console.log("show nav")
+            // console.log("show nav")
         }
       }
     })

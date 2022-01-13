@@ -99,7 +99,12 @@ export class VideoService {
           // source still matches the value sent when method was called.
           this.source === value
         ){
-          // this.makeDynamic();
+
+          // May need to find a more appropriate place for this.
+          this.makeDynamic();
+
+
+          
           this._videoPlayer.src = window.URL.createObjectURL(blob);
 
           // Better place to put play method call?
@@ -179,11 +184,17 @@ export class VideoService {
   private makeStatic(){
     if (this._backgroundElement){
       this._backgroundElement.classList.add('static');
+      if (this._videoPlayer){
+        this._videoPlayer.hidden = true
+      }
     }
   }
   private makeDynamic(){
     if (this._backgroundElement){
       this._backgroundElement.classList.remove('static')
+      if (this._videoPlayer){
+        this._videoPlayer.hidden = false
+      }
     }
   }
 
