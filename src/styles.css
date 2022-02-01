@@ -205,7 +205,12 @@ em {
   padding: 0 0 0 1rem;
   background: url(/assets/images/rules/vertical-rule.png) repeat-y left;
 }
-
+#musicItem section#details ul li {
+  color: #fff
+}
+#musicItem section#details ul li span.label {
+  color: #a19e91;
+}
 
 
 /* -----------------     Listening Options    ---------------------- */
