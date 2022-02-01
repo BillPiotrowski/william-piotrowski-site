@@ -28,6 +28,7 @@ import { YouCantPutYourArmsComponent } from './music/you-cant-put-your-arms/you-
 import { ShadowOfTheRavenComponent } from './music/shadow-of-the-raven/shadow-of-the-raven.component';
 import { WhatSeparatesUsComponent } from './music/what-separates-us/what-separates-us.component';
 import { EndlessNightComponent } from './music/endless-night/endless-night.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -55,7 +56,8 @@ import { EndlessNightComponent } from './music/endless-night/endless-night.compo
     YouCantPutYourArmsComponent,
     ShadowOfTheRavenComponent,
     WhatSeparatesUsComponent,
-    EndlessNightComponent
+    EndlessNightComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -102,7 +104,7 @@ import { EndlessNightComponent } from './music/endless-night/endless-night.compo
       { path: '',   redirectTo: '/what-separates-us', pathMatch: 'full' },
       { path: 'endless-night', component: EndlessNightComponent, data: {animation: 'MusicItemPage'} },
       { path: '',   redirectTo: '/endless-night', pathMatch: 'full' },
-      // { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
+      { path: '**', component: PageNotFoundComponent  },  // Wildcard route for a 404 page
     ], {scrollPositionRestoration: 'enabled'}),
     // https://stackoverflow.com/questions/39601026/angular-2-scroll-to-top-on-route-change
   ],
