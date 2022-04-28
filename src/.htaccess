@@ -1,3 +1,32 @@
+
+
+
+#<IfModule mod_rewrite.c>
+#RewriteEngine On
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#</IfModule>
+
+
+
+RewriteEngine on
+
+# www.
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+
+
+
+
+
+
+
 RewriteEngine On
 
 # Following lines from angular site do not work:
@@ -23,10 +52,19 @@ RewriteRule ^(.*) /index.html [NC,L]
 
 
 # Following two commands fix https issues
-RewriteCond %{SERVER_PORT} !=443
-RewriteRule ^(.*)$ https://williampiotrowski.com/$1 [R=301,L]
+#RewriteCond %{SERVER_PORT} !=443
+#RewriteRule ^(.*)$ https://williampiotrowski.com/$1 [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^www.williampiotrowski.com [NC]
-RewriteRule ^(.*)$ https://williampiotrowski.com/$1 [L,R=301]
+#RewriteCond %{HTTP_HOST} ^www.williampiotrowski.com [NC]
+#RewriteRule ^(.*)$ https://williampiotrowski.com/$1 [L,R=301]
 
 
+
+
+
+
+
+
+
+
+RedirectMatch 301 ^/dark-music-database https://scorep.io/dark-music-database
