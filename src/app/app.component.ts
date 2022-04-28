@@ -13,7 +13,8 @@ import { Router, Event, NavigationStart, RouterOutlet, ActivationEnd, Activation
 import { slideInAnimation } from './animations'
 import { AudioService } from './audio.service';
 import { VideoService } from './video.service';
-import assetURLS from './asset-urls.json'; 
+import assetURLS from './asset-urls.json';
+import { Title, Meta } from '@angular/platform-browser';
 
 
 // const config = require("./config.json");
@@ -40,6 +41,7 @@ import assetURLS from './asset-urls.json';
 
 export class AppComponent {
 
+  title = 'William Piotrowski - Composer & Producer';
   // @ViewChild('myname') input:ElementRef; 
   
   // @ViewChildren('div1,div2,div3') divs:QueryList<ElementRef>;
@@ -72,7 +74,9 @@ export class AppComponent {
   constructor(
     private router: Router,
     private audioService: AudioService,
-    private videoService: VideoService
+    private videoService: VideoService,
+    private titleService: Title,
+    private metaService: Meta
   ) { 
     console.log("assets:")
     console.log(assetURLS)
@@ -83,6 +87,15 @@ export class AppComponent {
   @ViewChild('container') container: any;
 
   ngOnInit() {
+
+
+    this.titleService.setTitle(this.title);
+    this.metaService.addTags([
+      {name: 'keywords', content: ''},
+      {name: 'description', content: ''},
+      {name: 'robots', content: 'index, follow'}
+    ]);
+
     this.router.events.subscribe( (e) => {
       if (e instanceof NavigationStart) {
         // console.log(this.videoplayer)
@@ -124,6 +137,13 @@ export class AppComponent {
         if (!urlAssets || urlAssets === null){
           return
         }
+        this.titleService.setTitle(urlAssets['title']);
+        this.metaService.updateTag(
+          // {name: 'keywords', content: urlAssets['keywords']}//,
+          {name: 'description', content: urlAssets['description']}//,
+          // {name: 'robots', content: 'index, follow'}
+        );
+
         const audioFileName = urlAssets['audio']
         const videoFileName = urlAssets['video']
         const bgImage = urlAssets['bg-image']
@@ -160,7 +180,6 @@ export class AppComponent {
   }
 
 
-  title = 'williamPiotrowski';
 
   toggleAudio() {
     this.audioService.toggleEnable()

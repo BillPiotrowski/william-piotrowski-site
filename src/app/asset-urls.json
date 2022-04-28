@@ -2,102 +2,162 @@
     "urls": [
         {
             "url": "/",
+            "title": "composer - producer - developer - William Piotrowski",
+            "description": "The official website for composer & producer, William Piotrowski. Founding member of Nox Arcana.",
+            "keywords": "",
             "video": "home-bg-dark.mp4",
             "audio": "score.m4a"
         },
         {
             "url": "/biography",
+            "title": "Biography of William Piotrowski",
+            "description": "Biography of musician and composer, William Piotrowski of Nox Arcana.",
+            "keywords": "",
             "video": "home-bg-dark.mp4",
             "audio": "score.m4a"
         },
         {
             "url": "/correspond",
+            "title": "Correspond with William Piotrowski",
+            "description": "You are welcome to correspond with William Piotrowski via email and social media.",
+            "keywords": "",
             "video": "home-bg-dark.mp4",
             "audio": "score.m4a"
         },
         {
             "url": "/repertorium",
+            "title": "Repertorium - The Music of William Piotrowski",
+            "description": "The catalog of music by William Piotrowski – as a solo artist and member of Nox Arcana.",
+            "keywords": "",
             "video": "home-bg-dark.mp4",
             "audio": "score.m4a"
         },
         {
             "url": "/grey-cardinal",
+            "title": "Grey Cardinal - William Piotrowski",
+            "description": "A cinematic Remix of Collapsing Scenary's single, Grey Cardinal by Ryan Ross and William Piotrowski.",
+            "keywords": "",
             "video": "greyCardinal.mp4",
             "audio": "grey-cardinal.mp3"
         },
         {
             "url": "/darklore-manor",
+            "title": "Darklore Manor - William Piotrowski",
+            "description": "21 track album by Nox Arcana about a haunted Victorian mansion.",
+            "keywords": "",
             "video": "darklore.mp4",
             "audio": "sanctuary-of-shadows.mp3"
         },
         {
             "url": "/necronomicon",
+            "title": "Necronomicon - William Piotrowski",
+            "description": "21 tracks of dark orchestral music to accompany the stories of H.P. Lovecraft.",
+            "keywords": "",
             "video": "necronomicon.mp4",
             "audio": "the-stars-alight.m4a"
         },
         {
             "url": "/winters-knight",
+            "title": "Winter's Knight - William Piotrowski",
+            "description": "A 21 track album of dark instrumental music for the winter season.",
+            "keywords": "",
             "video": "winters-knight.mp4",
             "audio": "winters-knight-medley.m4a"
         },
         {
             "url": "/transylvania",
+            "title": "Transylvania - William Piotrowski",
+            "description": "An instrumental journey through the land of Bram Stoker's Dracula.",
+            "keywords": "",
             "video": "transylvania.mp4",
             "audio": "transylvania-medley.m4a"
         },
         {
             "url": "/carnival-of-lost-souls",
+            "title": "Carnival of Lost Souls - William Piotrowski",
+            "description": "A horrifying 21 track album featuring calliopes and clowns.",
+            "keywords": "",
             "video": "carnival.mp4",
             "audio": "carnival-medley.m4a"
         },
         {
             "url": "/blood-of-the-dragon",
+            "title": "Blood of the Dragon - William Piotrowski",
+            "description": "Perfect orchestral music for your tabletop RPG adventure.",
+            "keywords": "",
             "video": "dragon.mp4",
             "audio": "dragon-medley.m4a"
         },
         {
             "url": "/shadow-of-the-raven",
+            "title": "Shadow of the Raven - William Piotrowski",
+            "description": "A 21 track album to accompany the works of Edgar Allan Poe.",
+            "keywords": "",
             "video": "raven.mp4",
             "audio": "raven-medley.mp3"
         },
         {
             "url": "/grimm-tales",
+            "title": "Grimm Tales - William Piotrowski",
+            "description": "A 21 track instrumental album to accompany the dark Grimm fairy tales.",
+            "keywords": "",
             "video": "grimm.mp4",
             "audio": "grimm-medley.mp3",
             "bg-image": "grimm-tales.jpg"
         },
         {
             "url": "/phantoms-of-the-high-seas",
+            "title": "Phantoms of the High Seas - William Piotrowski",
+            "description": "21 tracks of instrumental music to accompany any pirate adventure.",
+            "keywords": "",
             "video": "pirates.mp4",
             "audio": "phantoms-medley.mp3"
         },
         {
             "url": "/blood-of-angels",
+            "title": "Blood of Angels - William Piotrowski",
+            "description": "A music album with occult author Michelle Belanger.",
+            "keywords": "",
             "video": "",
             "audio": "blood-of-angels.m4a"
         },
         {
             "url": "/lonesome-town",
+            "title": "Lonesome Town - William Piotrowski",
+            "description": "Cover of Lonesome Town by Z Berg, Ryan Ross and William Piotrowski.",
+            "keywords": "",
             "video": "lonesome-town.mp4",
             "audio": "lonesome-town.m4a"
         },
         {
             "url": "/crimson-winter",
+            "title": "Crimson Winter - William Piotrowski",
+            "description": "Original motion picture soundtrack to the vampire film, Crimson Winter.",
+            "keywords": "",
             "video": "",
             "audio": "crimson.m4a"
         },
         {
             "url": "/you-cant-put-your-arms-around-a-memory",
+            "title": "You Can't Put Your Arms Around a Memory - William Piotrowski",
+            "description": "Cover of You Can't Put Your Arms Around a Memory by Ryan Ross and William Piotrowski.",
+            "keywords": "",
             "video": "",
             "audio": "memory.m4a"
         },
         {
             "url": "/what-separates-us",
+            "title": "What Separates Us - William Piotrowski",
+            "description": "Original motion picture soundtrack to the film, What Separates.",
+            "keywords": "",
             "video": "",
             "audio": "what-separates-us.mp3"
         },
         {
             "url": "/endless-night",
+            "title": "Endless Night - William Piotrowski",
+            "description": "Darkwave single with a pulsing heartbeat.",
+            "keywords": "",
             "video": "",
             "audio": "endless-night.mp3"
         }
